@@ -1,0 +1,59 @@
+{
+    // === Code Runner ===
+    // Compile & run from the src/ folder so package names (folder names) resolve correctly.
+    // Finds \src\ in the path, cd's there, computes the package from the remaining path.
+    "code-runner.executorMap": {
+        "java": "$d='$dirWithoutTrailingSlash'.Trim('\"'); $t=$d+'\\'; $i=$t.LastIndexOf('\\src\\'); $s=$d.Substring(0,$i+4); $pkg=$t.Substring($i+5).TrimEnd('\\').Replace('\\','.'); cd $s; if($pkg){ javac ($pkg.Replace('.','/')+'/$fileName'); if($?){ java ($pkg+'.$fileNameWithoutExt') } } else { javac $fileName; if($?){ java $fileNameWithoutExt } }"
+    },
+    "code-runner.runInTerminal": true,
+    // === File Management ===
+    "files.exclude": {
+        "**/*.class": true
+    },
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    // === Editor Settings ===
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    // === Java Specific ===
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "java.codeGeneration.useBlocks": true,
+    "java.codeGeneration.generateComments": true,
+    "java.completion.importOrder": [
+        "java",
+        "javax",
+        "com",
+        "org"
+    ],
+    // Automatically detects source roots in your workspace
+    "java.import.project.importOnFirstTimeStartup": "automatic",
+    "java.project.importHint": "enabled",
+    // Forces the "Run" button to use the project root
+    "java.debug.settings.console": "integratedTerminal",
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC",
+    // This helps VS Code ignore the "Assignments/" prefix in the terminal
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "java.errors.incompleteClasspath.severity": "ignore",
+    // Compiler warnings are suppressed via .settings/org.eclipse.jdt.core.prefs
+    "java.compile.nullAnalysis.mode": "disabled",
+    // === Source Paths ===
+    // Each folder is its own source root so package declarations
+    // only need to reflect sub-folders *within* that root.
+    // e.g. Practice/p01_Basics/HelloWorld.java → package p01_Basics;  ✓
+    //      Assignments/Bank2.java              → no package needed     ✓
+    "java.project.sourcePaths": [
+        "CSE215L/src"
+    ],
+    // Keep compiled .class files out of your source folders
+    "java.project.outputPath": "bin"
+}
