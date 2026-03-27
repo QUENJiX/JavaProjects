@@ -9,11 +9,10 @@ public class problem7 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int num = input.nextInt();
-        boolean isEven = (num % 2 == 0);
 
-        switch (isEven ? 0 : 1) {
+        switch (num % 2) {
             case 0 -> System.out.println("The number is even.");
-            case 1 -> System.out.println("The number is odd.");
+            case 1, -1 -> System.out.println("The number is odd.");
             default -> System.out.println("Invalid input.");
         }
         input.close();

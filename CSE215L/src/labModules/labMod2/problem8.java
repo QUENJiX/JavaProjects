@@ -12,7 +12,7 @@ public class problem8 {
         b = input.nextInt();
         c = input.nextInt();
 
-        System.out.println("Press '1' for addition of numbers");
+        System.out.println("Press '1'x for addition of numbers");
         System.out.println("Press '2' for the subtraction of other numbers from the maximum");
         System.out.println("Press '3' for the multiplication of numbers");
 

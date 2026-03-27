@@ -7,14 +7,12 @@ package labModules.labMod3;
 
 public class problem3 {
     public static void main(String[] args) {
-        double[] array = { 3.4, 5.6, 7.8, 9.0, 1.2, 4.5, 6.7, 8.9, 0.1, 2.3 };
-        double temp;
+        double[] array = { 5.5, 6.2, 2.8, 8.1, 1.0, 3.3, 4.4, 9.9, 7.7, 0.5 };
         // Sorting the array in ascending order using bubble sort
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = 0; j < array.length - i - 1; j++) {
                 if (array[j] > array[j + 1]) {
-                    // Swap array[j] and array[j+1]
-                    temp = array[j];
+                    double temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
                 }
@@ -24,6 +22,5 @@ public class problem3 {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
-
     }
 }
