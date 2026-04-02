@@ -17,8 +17,7 @@ public class problem2 {
         firstName = input.nextLine();
         System.out.print("Enter your last name: ");
         lastName = input.nextLine();
-        System.out.println(firstName.toUpperCase() + " " + lastName); // concat(firstName.toUpperCase(), lastName) also
-                                                                      // works
+        System.out.println(firstName.toUpperCase() + " " + lastName); // concat(firstName.toUpperCase(), lastName) also // works
 
         input.close();
     }

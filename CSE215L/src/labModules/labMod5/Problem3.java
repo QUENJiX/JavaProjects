@@ -2,7 +2,7 @@ package labModules.labMod5;
 
 /* * Problem 3: You are tasked to make a BankAccount Class that contains instance and static variables.
  * Figure out which variables are static, create getters/setters, static methods for totals, 
- * and test with 5 instances.
+ * and test with 5 instences.
  */
 
 class BankAccount {

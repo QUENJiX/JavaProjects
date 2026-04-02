@@ -10,13 +10,13 @@ public class Problem7 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int students = 4;
-        int subjects = 5;
+        int students = 2;
+        int subjects = 2;
         int[][] marks = new int[students][subjects];
 
         // Taking User Input with validation
         for (int i = 0; i < students; i++) {
-            System.out.println("--- Entering marks for Student " + (i + 1) + " ---");
+            System.out.println("Entering marks for Student " + (i + 1) + ":");
             for (int j = 0; j < subjects; j++) {
                 int score = -1;
                 // Validation loop: runs until a valid score is entered
@@ -34,7 +34,7 @@ public class Problem7 {
         }
 
         // a. Print the whole result in a tabular manner
-        System.out.println("============== TABULAR RESULT ==============");
+        System.out.println("TABULAR RESULT");
         System.out.print("          \t");
         for (int j = 0; j < subjects; j++) {
             System.out.print("Sub " + (j + 1) + "\t");
@@ -50,7 +50,7 @@ public class Problem7 {
         }
 
         // b. Find the average score from each student for all subjects
-        System.out.println("\n--- Average Score per Student ---");
+        System.out.println("\nAverage Score per Student");
         for (int i = 0; i < students; i++) {
             int studentSum = 0;
             for (int j = 0; j < subjects; j++) {
@@ -61,7 +61,7 @@ public class Problem7 {
         }
 
         // c & d. Find the average score and highest mark earner for each subject
-        System.out.println("\n--- Subject Analysis ---");
+        System.out.println("\nSubject Analysis");
         for (int j = 0; j < subjects; j++) {
             int subjectSum = 0;
             int highestMark = -1;

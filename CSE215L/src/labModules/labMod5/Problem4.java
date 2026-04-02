@@ -61,7 +61,7 @@ class Team {
     public void removePlayer(String playerName) {
         boolean found = false;
         for (int i = 0; i < currentNumberOfPlayers; i++) {
-            if (players[i].equals(playerName)) {
+            if (players[i].equalsIgnoreCase(playerName)) {
                 found = true;
                 // Shift remaining players to the left to fill the gap
                 for (int j = i; j < currentNumberOfPlayers - 1; j++) {

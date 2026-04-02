@@ -1,8 +1,7 @@
 package labModules.labMod7;
 
-// Gunner extends RPGCharacter [cite: 352]
 public class Gunner extends RPGCharacter {
-    private int precision; // [cite: 357]
+    private int precision;
 
     public Gunner(String name, int level, int healthPoints, int precision) {
         super(name, level, healthPoints);
@@ -18,12 +17,11 @@ public class Gunner extends RPGCharacter {
     }
 
     public void shootEnemy() {
-        System.out.println(getName() + " has shot a bullet to the enemy"); // [cite: 370]
+        System.out.println(getName() + " has shot a bullet to the enemy");
     }
 
     public void increasePrecision() {
-        // Increases precision by 5 plus current level [cite: 371]
         this.precision += 5 + getLevel();
-        System.out.println("Precision Increment is Successful for " + getName()); // [cite: 371]
+        System.out.println("Precision Increment is Successful for " + getName());
     }
 }

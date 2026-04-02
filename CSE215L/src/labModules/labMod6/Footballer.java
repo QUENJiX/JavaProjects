@@ -61,7 +61,7 @@ public class Footballer {
     }
 
     // Method to compare stats with another footballer
-    public void compareStats(Footballer other) {
+    public void compareStats(Footballer other) { 
         if (this.goals > other.goals && this.assists > other.assists) {
             System.out.println(this.name + " has more goals and assists than " + other.name + ".");
         } else if (this.goals > other.goals && this.assists <= other.assists) {

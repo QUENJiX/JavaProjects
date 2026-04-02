@@ -1,6 +1,6 @@
 package labWorks.cartask;
 
-public class CarTask {
+public class CarTest {
     public static void main(String[] args) {
         Car randomCar = new Car("Generic Car", 0);
         Ford ford = new Ford("Mustang", 1000, false);

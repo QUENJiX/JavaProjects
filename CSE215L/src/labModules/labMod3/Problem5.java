@@ -6,7 +6,6 @@ package labModules.labMod3;
  */
 public class Problem5 {
     public static void main(String[] args) {
-        // Initializing the 4x4 matrix with the provided values
         int[][] matrix = {
                 { 4, 2, 7, 6 },
                 { 3, 7, 9, -5 },
@@ -29,12 +28,12 @@ public class Problem5 {
         System.out.println("----------------------------------");
 
         // Diagonal sums
-        int mainDiagonalSum = 0; // Top-left to bottom-right
-        int antiDiagonalSum = 0; // Top-right to bottom-left
+        int mainDiagonalSum = 0;
+        int antiDiagonalSum = 0;
 
         for (int i = 0; i < 4; i++) {
             mainDiagonalSum += matrix[i][i];
-            antiDiagonalSum += matrix[i][3 - i]; // 3 is (length - 1)
+            antiDiagonalSum += matrix[i][3 - i]; // matrix[i][matrix[0].length - 1 - i]
         }
 
         System.out.println("Sum of Top-Left to Bottom-Right Diagonal: " + mainDiagonalSum);

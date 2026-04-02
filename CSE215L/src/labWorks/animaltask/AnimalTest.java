@@ -1,6 +1,6 @@
 package labWorks.animaltask;
 
-public class AnimalTask {
+public class AnimalTest {
     public static void main(String[] args) {
         Animal randomAnimal = new Animal("Generic Animal", 0);
         Giraffe giraffe = new Giraffe("Gerald", 8, false);

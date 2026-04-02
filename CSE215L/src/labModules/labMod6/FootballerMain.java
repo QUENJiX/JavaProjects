@@ -6,7 +6,7 @@ package labModules.labMod6;
  */
 import java.util.Scanner;
 
-public class Test {
+public class FootballerMain {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 

@@ -1,19 +1,18 @@
 package labModules.labMod7;
 
 public class RPGCharacter {
-    // Data fields
     private String name;
     private int level;
     private int healthPoints;
 
-    // Default constructor
+    // Default Constructor
     public RPGCharacter() {
-        this.name = "NPC"; //
-        this.level = 1; //
-        this.healthPoints = 10; //
+        this.name = "NPC";
+        this.level = 1;
+        this.healthPoints = 10;
     }
 
-    // Parameterized constructor
+    // Parameterized Constructor
     public RPGCharacter(String name, int level, int healthPoints) {
         this.name = name;
         this.level = level;

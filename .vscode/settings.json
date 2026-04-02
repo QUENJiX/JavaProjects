@@ -55,5 +55,11 @@
         "CSE215L/src"
     ],
     // Keep compiled .class files out of your source folders
-    "java.project.outputPath": "bin"
+    "java.project.outputPath": "bin",
+    "github.copilot.editor.enableCodeActions": true,
+    "github.copilot.nextEditSuggestions.allowWhitespaceOnlyChanges": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.nextEditSuggestions.extendedRange": true,
+    "github.copilot.nextEditSuggestions.fixes": true,
+    "github.copilot.chat.notebook.enhancedNextEditSuggestions.enabled": true
 }
