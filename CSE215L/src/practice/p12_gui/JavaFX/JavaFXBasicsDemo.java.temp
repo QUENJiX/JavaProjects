@@ -1,0 +1,61 @@
+package practice.p12_gui;
+
+import java.awt.Button;
+import java.awt.Label;
+
+/**
+ * Demonstrates basic JavaFX concepts: Application structure, Stage, Scene,
+ * Pane layouts (StackPane), controls (Button, Label), and basic event handling.
+ * 
+ * NOTE: Running this depends on JavaFX being available in the module path
+ * (e.g., using a JDK that includes JavaFX like Liberica JDK, or adding VM args).
+ */
+import javafx.application.Application;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class JavaFXBasicsDemo extends Application {
+
+    public static void main(String[] args) {
+        // Launch the JavaFX application
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) {
+        // The start() method is the main entry point for all JavaFX applications.
+
+        // 1. Create a root node (layout container) -> VBox arranges children vertically
+        VBox root = new VBox(20); // 20px spacing
+        root.setAlignment(Pos.CENTER);
+        root.setStyle("-fx-background-color: #f4f4f4; -fx-padding: 20;");
+
+        // 2. Create UI components (Nodes)
+        Label welcomeLabel = new Label("Welcome to JavaFX!");
+        welcomeLabel.setStyle("-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;");
+
+        Button clickButton = new Button("Click Me!");
+        clickButton.setStyle("-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-size: 14px;");
+
+        Label resultLabel = new Label("");
+        resultLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #28a745;");
+
+        // 3. Add Event Handler
+        clickButton.setOnAction(event -> {
+            resultLabel.setText("Button clicked successfully!");
+        });
+
+        // 4. Add components to the layout
+        root.getChildren().addAll(welcomeLabel, clickButton, resultLabel);
+
+        // 5. Create the Scene and add the layout to it
+        Scene scene = new Scene(root, 400, 300);
+
+        // 6. Configure the primary Stage (Window) and display
+        primaryStage.setTitle("JavaFX Basics Demo");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+}

@@ -21,6 +21,19 @@
     "editor.guides.bracketPairs": true,
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
+    // === Speed & UI Optimizations (New) ===
+    // Force custom snippets to the absolute top of the list
+    "editor.snippetSuggestions": "top",
+    // Remove the 10ms delay so the autocomplete menu appears instantly
+    "editor.quickSuggestionsDelay": 0,
+    // Show inline parameter names (e.g., substring(/* beginIndex: */ 0))
+    "editor.inlayHints.enabled": "on",
+    // Smooth visual feedback for fast keyboard navigation
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "smooth",
+    // Condense empty parent/child folders into a single line in the explorer
+    "explorer.compactFolders": true,
     // === Java Specific ===
     "editor.codeActionsOnSave": {
         "source.organizeImports": "explicit"
@@ -46,16 +59,18 @@
     "java.errors.incompleteClasspath.severity": "ignore",
     // Compiler warnings are suppressed via .settings/org.eclipse.jdt.core.prefs
     "java.compile.nullAnalysis.mode": "disabled",
+    // Java Format Overrides (Protects your one-line snippets if you ever re-enable formatOnSave)
+    "java.format.settings.profile": "Google",
+    "java.format.comments.generate": false,
     // === Source Paths ===
     // Each folder is its own source root so package declarations
     // only need to reflect sub-folders *within* that root.
-    // e.g. Practice/p01_Basics/HelloWorld.java → package p01_Basics;  ✓
-    //      Assignments/Bank2.java              → no package needed     ✓
     "java.project.sourcePaths": [
         "CSE215L/src"
     ],
     // Keep compiled .class files out of your source folders
     "java.project.outputPath": "bin",
+    // === Copilot Settings ===
     "github.copilot.editor.enableCodeActions": true,
     "github.copilot.nextEditSuggestions.allowWhitespaceOnlyChanges": true,
     "github.copilot.nextEditSuggestions.enabled": true,

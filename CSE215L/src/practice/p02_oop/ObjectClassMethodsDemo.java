@@ -202,9 +202,7 @@ class Book implements Cloneable {
         return title;
     }
 
-    public String getAuthor() {
-        return author;
-    }
+    public String getAuthor() {return author;}
 
     public int getYear() {
         return year;

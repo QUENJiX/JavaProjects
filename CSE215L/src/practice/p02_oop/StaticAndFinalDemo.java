@@ -31,7 +31,7 @@ public class StaticAndFinalDemo {
 
     public static void main(String[] args) {
         System.out.println("╔══════════════════════════════════════════════╗");
-        System.out.println("║   STATIC & FINAL KEYWORDS DEMO              ║");
+        System.out.println("║   STATIC & FINAL KEYWORDS DEMO               ║");
         System.out.println("╚══════════════════════════════════════════════╝\n");
 
         // =====================================================================

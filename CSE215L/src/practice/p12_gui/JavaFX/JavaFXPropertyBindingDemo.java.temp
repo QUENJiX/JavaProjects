@@ -1,0 +1,78 @@
+package practice.p12_gui;
+
+import java.lang.classfile.Label;
+
+import javax.script.Bindings;
+
+/**
+ * Demonstrates a critical concept unique to JavaFX: Properties and Bidirectional Binding.
+ * Shows how values of properties (like text, sizes, numbers) can be linked automatically.
+ */
+import javafx.application.Application;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Slider;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class JavaFXPropertyBindingDemo extends Application {
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) {
+        primaryStage.setTitle("JavaFX Bindings and Properties");
+
+        VBox layout = new VBox(20);
+        layout.setPadding(new Insets(20));
+
+        // 1. One-way Text Binding
+        TextField sourceField = new TextField("Hello, Binding!");
+        sourceField.setPromptText("Type here...");
+
+        Label observerLabel = new Label();
+        // The label's text will always mirror the field's text
+        observerLabel.textProperty().bind(Bindings.concat("Echo: ", sourceField.textProperty()));
+
+        // 2. Bidirectional Number Binding (Slider)
+        Slider slider = new Slider(0, 100, 50);
+        Label sliderValueLabel = new Label();
+
+        // Convert double property to string format property to display cleanly
+        sliderValueLabel.textProperty().bind(Bindings.format("Slider Value: %.2f", slider.valueProperty()));
+
+        // 3. Custom Properties calculations
+        DoubleProperty widthProperty = new SimpleDoubleProperty(100);
+        DoubleProperty heightProperty = new SimpleDoubleProperty(50);
+        Label areaLabel = new Label();
+
+        // Calculate Area (w * h) reactively! If area property changes, the text updates
+        areaLabel.textProperty().bind(Bindings.format(
+                "Width: %.0f, Height: %.0f Area: %.0f",
+                widthProperty, heightProperty,
+                widthProperty.multiply(heightProperty)));
+
+        // Updating standard property
+        slider.valueProperty().addListener((observable, oldValue, newValue) -> {
+            widthProperty.set(newValue.doubleValue() * 2);
+            heightProperty.set(newValue.doubleValue() + 20); // Both variables update area calculation naturally
+        });
+
+        layout.getChildren().addAll(
+                new Label("Type below to update the label in real-time:"),
+                sourceField, observerLabel,
+                new Label("---"),
+                new Label("Adjust the slider to trigger area recalculation:"),
+                slider, sliderValueLabel, areaLabel);
+
+        Scene scene = new Scene(layout, 400, 350);
+
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+}

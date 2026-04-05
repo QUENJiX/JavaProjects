@@ -32,6 +32,7 @@ public class ClassExample {
         // Creating objects using different constructors
         Student student1 = new Student(); // Default constructor
         Student student2 = new Student("Alice", 20, "CS101"); // Parameterized constructor
+        Student student3 = new Student(student2); // Copy constructor
 
         // Using setter methods
         student1.setName("Bob");
@@ -45,6 +46,12 @@ public class ClassExample {
         System.out.println("\n=== Student 2 ===");
         student2.displayInfo();
 
+        System.out.println("\n=== Student 3 (Copy) ===");
+        student3.displayInfo();
+        student3.setName("Charlie"); // Changing name of student3 to show they are separate objects
+        System.out.println("\n=== Student 3 (After Name Change) ===");
+        student3.displayInfo();
+
         // Demonstrating encapsulation - validation in setter
         System.out.println("\n=== Testing Validation ===");
         student1.setAge(-5); // Invalid age, will be rejected
@@ -54,6 +61,12 @@ public class ClassExample {
         System.out.println("\n=== Static Members ===");
         System.out.println("Total students created: " + Student.getStudentCount());
         System.out.println("University name: " + Student.UNIVERSITY_NAME);
+
+        // Demonstrating toString() override
+        System.out.println("\n=== toString() Output ===");
+        System.out.println(student1); // Implicitly calls student1.toString()
+        System.out.println(student2);
+        System.out.println(student3);
     }
 }
 
@@ -93,7 +106,7 @@ class Student {
         studentCount++;
     }
 
-    // Copy constructor
+    // Copy constructor: creates a new Student by copying another Student's fields
     public Student(Student other) {
         this.name = other.name;
         this.age = other.age;

@@ -9,9 +9,9 @@ package practice.p02_oop;
  *
  * Two types:
  * ┌──────────────────────────────────────────────────────┐
- * │ COMPILE-TIME (Static) │ RUNTIME (Dynamic) │
- * │ Method OVERLOADING │ Method OVERRIDING │
- * │ Same name, diff params │ Same signature, diff class │
+ * │ COMPILE-TIME (Static)    │ RUNTIME (Dynamic)         │
+ * │ Method OVERLOADING       │ Method OVERRIDING         │
+ * │ Same name, diff params   │ Same signature, diff class│
  * │ Resolved at compile time │ Resolved at runtime (JVM) │
  * └──────────────────────────────────────────────────────┘
  *
