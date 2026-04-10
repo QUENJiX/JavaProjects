@@ -1,6 +1,6 @@
 import java.util.Vector;
 
-public class pVector {
+public class Main {
     public static void main(String[] args) {
         /*
          * Vector Functions:
