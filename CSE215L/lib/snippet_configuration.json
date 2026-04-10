@@ -1,0 +1,143 @@
+{
+    "Public Static Void Main": {
+        "prefix": "psmv",
+        "body": [
+            "public static void main(String[] args) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Main method entry point"
+    },
+    "Print to Console": {
+        "prefix": "print",
+        "body": "System.out.println($1);$0",
+        "description": "Print to standard output"
+    },
+    "Print Formatted": {
+        "prefix": "souf",
+        "body": "System.out.printf(\"${1:%s}\\n\", ${2:args});$0",
+        "description": "Print formatted string"
+    },
+    "Scanner Setup": {
+        "prefix": "scan",
+        "body": [
+            "Scanner ${1:input} = new Scanner(System.in);",
+            "$0",
+            "${1:input}.close();"
+        ],
+        "description": "Initialize Scanner and auto-close it"
+    },
+    "One-Line Getter/Setter": {
+        "prefix": "getset",
+        "body": [
+            "public ${1:String} get${2/(.*)/${1:/capitalize}/}() { return this.${2:name}; }",
+            "public void set${2/(.*)/${1:/capitalize}/}($1 $2) { this.$2 = $2; }$0"
+        ],
+        "description": "Fast one-line getter/setter for simple variables"
+    },
+    "Object Instantiation": {
+        "prefix": "obj",
+        "body": "${1:Class} ${2:name} = new ${1:Class}($3);$0",
+        "description": "Quickly create a new object instance"
+    },
+    "Compact Constructor": {
+        "prefix": "ctr",
+        "body": "public ${TM_FILENAME_BASE}() { $0 }",
+        "description": "One-line constructor using file name"
+    },
+    "Parameterized Constructor": {
+        "prefix": "cp",
+        "body": [
+            "public ${TM_FILENAME_BASE}(${1:Type} ${2:var1}, ${3:Type} ${4:var2}) {",
+            "\tthis.${2:var1} = ${2:var1};",
+            "\tthis.${4:var2} = ${4:var2};$0",
+            "}"
+        ],
+        "description": "Constructor with two common parameters"
+    },
+    "If / Else Block": {
+        "prefix": "ife",
+        "body": [
+            "if (${1:condition}) {",
+            "\t$2",
+            "} else {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Standard If-Else statement"
+    },
+    "Ternary Operator": {
+        "prefix": "tern",
+        "body": "${1:Type} ${2:result} = (${3:condition}) ? ${4:trueValue} : ${5:falseValue};$0",
+        "description": "Compact inline if-else (ternary)"
+    },
+    "Standard For Loop": {
+        "prefix": "fori",
+        "body": [
+            "for (int i = 0; i < ${1:array}.length; i++) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Standard indexed for loop"
+    },
+    "Nested For Loop (i, j)": {
+        "prefix": "forij",
+        "body": [
+            "for (int i = 0; i < ${1:matrix}.length; i++) {",
+            "\tfor (int j = 0; j < ${1:matrix}[i].length; j++) {",
+            "\t\t$0",
+            "\t}",
+            "}"
+        ],
+        "description": "Nested loop using i and j for 2D arrays"
+    },
+    "Print 2D Array Matrix": {
+        "prefix": "print2d",
+        "body": [
+            "for (int i = 0; i < ${1:matrix}.length; i++) {",
+            "\tfor (int j = 0; j < ${1:matrix}[i].length; j++) {",
+            "\t\tSystem.out.print(${1:matrix}[i][j] + \" \");",
+            "\t}",
+            "\tSystem.out.println();$0",
+            "}"
+        ],
+        "description": "Traverse and print a 2D array as a grid"
+    },
+    "Input 2D Array Matrix": {
+        "prefix": "scan2d",
+        "body": [
+            "for (int i = 0; i < ${1:matrix}.length; i++) {",
+            "\tfor (int j = 0; j < ${1:matrix}[i].length; j++) {",
+            "\t\t${1:matrix}[i][j] = ${2:input}.next${3:Int}();$0",
+            "\t}",
+            "}"
+        ],
+        "description": "Take Scanner input to populate a 2D array"
+    },
+    "Array Initialization": {
+        "prefix": "arr",
+        "body": "${1:Type}[] ${2:arrayName} = new ${1:Type}[${3:size}];$0",
+        "description": "Initialize a standard array"
+    },
+    "2D Array Initialization": {
+        "prefix": "arr2d",
+        "body": "${1:Type}[][] ${2:matrixName} = new ${1:Type}[${3:rows}][${4:cols}];$0",
+        "description": "Initialize a 2D matrix array"
+    },
+    "Switch Case": {
+        "prefix": "switch",
+        "body": [
+            "switch (${1:variable}) {",
+            "\tcase ${2:value1}:",
+            "\t\t$3",
+            "\t\tbreak;",
+            "\tcase ${4:value2}:",
+            "\t\t$5",
+            "\t\tbreak;",
+            "\tdefault:",
+            "\t\t$0",
+            "}"
+        ],
+        "description": "Standard switch case block"
+    }
+}
