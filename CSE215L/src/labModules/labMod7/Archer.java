@@ -3,6 +3,11 @@ package labModules.labMod7;
 public class Archer extends RPGCharacter {
     private int accuracy;
 
+    public Archer(){
+        super();
+        this.accuracy = 60;
+    }
+
     public Archer(String name, int level, int healthPoints, int accuracy) {
         super(name, level, healthPoints);
         this.accuracy = accuracy;
@@ -10,9 +15,7 @@ public class Archer extends RPGCharacter {
 
     public int getAccuracy() {
         return accuracy;
-    }
-
-    public void setAccuracy(int accuracy) {
+    }public void setAccuracy(int accuracy) {
         this.accuracy = accuracy;
     }
 
@@ -22,6 +25,6 @@ public class Archer extends RPGCharacter {
 
     public void increaseAccuracy() {
         this.accuracy += 10 + (getLevel() * 2);
-        System.out.println("Accuracy Increment is Successful " + getName());
+        System.out.println("Accuracy Increment is Successful for " + getName());
     }
 }

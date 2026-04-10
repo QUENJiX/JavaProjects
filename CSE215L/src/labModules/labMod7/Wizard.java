@@ -10,9 +10,7 @@ public class Wizard extends RPGCharacter {
 
     public int getMagicPoints() {
         return magicPoints;
-    }
-
-    public void setMagicPoints(int magicPoints) {
+    }public void setMagicPoints(int magicPoints) {
         this.magicPoints = magicPoints;
     }
 

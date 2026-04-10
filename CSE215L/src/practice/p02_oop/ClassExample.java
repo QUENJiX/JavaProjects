@@ -20,6 +20,9 @@ package practice.p02_oop;
  * 📌 RULE: Encapsulation = private fields + public getters/setters.
  * This protects data integrity (validation in setters) and hides
  * implementation.
+ * 
+ * 📌 RULE: Static members belong to the class, not instances. Use static for
+ * variables and methods that are shared across all instances of the class.
  *
  * 🔗 SEE ALSO: p02_OOP/InheritanceDemo.java (extending classes)
  * 🔗 SEE ALSO: p02_OOP/StaticAndFinalDemo.java (deep-dive on static/final)

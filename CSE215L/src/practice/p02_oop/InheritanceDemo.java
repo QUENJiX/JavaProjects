@@ -23,6 +23,10 @@ package practice.p02_oop;
  * ⚠️ GOTCHA: Prefer composition over inheritance when the relationship
  * is "HAS-A" rather than "IS-A". A Car HAS-A Engine (composition),
  * a Car IS NOT an Engine (don't use inheritance).
+ * 
+ * Example:
+ * Composition: class Car { private Engine engine; } // Car HAS-A Engine
+ * Inheritance: class Dog extends Animal { } // Dog IS-A Animal
  *
  * 🔗 SEE ALSO: p02_OOP/PolymorphismDemo.java (runtime method dispatch)
  * 🔗 SEE ALSO: p03_Interfaces/AbstractClassDemo.java (abstract classes)

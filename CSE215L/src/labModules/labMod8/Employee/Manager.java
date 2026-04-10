@@ -4,8 +4,7 @@ public class Manager extends Employee {
     private String department;
     private int employeeCount;
 
-    public Manager() {
-    }
+    public Manager() {}
 
     public Manager(String name, double salary, String department, int employeeCount) {
         super(name, salary);
@@ -15,17 +14,13 @@ public class Manager extends Employee {
 
     public void setDept(String dept) {
         this.department = dept;
-    }
-
-    public String getDept() {
+    }public String getDept() {
         return department;
     }
 
     public void setEmployeeCount(int empCount) {
         this.employeeCount = empCount;
-    }
-
-    public int getEmployeeCount() {
+    }public int getEmployeeCount() {
         return employeeCount;
     }
 

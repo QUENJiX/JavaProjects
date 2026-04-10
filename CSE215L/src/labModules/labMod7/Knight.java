@@ -1,5 +1,6 @@
 package labModules.labMod7;
 
+// Mohammad Bin <extends> Salman 
 public class Knight extends RPGCharacter {
     private int defensePoints;
 
@@ -15,9 +16,7 @@ public class Knight extends RPGCharacter {
 
     public int getDefensePoints() {
         return defensePoints;
-    }
-
-    public void setDefensePoints(int defensePoints) {
+    }public void setDefensePoints(int defensePoints) {
         this.defensePoints = defensePoints;
     }
 

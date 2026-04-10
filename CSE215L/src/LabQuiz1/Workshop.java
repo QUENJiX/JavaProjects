@@ -1,5 +1,3 @@
 package LabQuiz1;
 
-public class Workshop {
-    
-}
+public class Workshop {}

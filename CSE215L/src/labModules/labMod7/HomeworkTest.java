@@ -2,6 +2,13 @@ package labModules.labMod7;
 
 public class HomeworkTest {
     public static void main(String[] args) {
+        System.out.println("--- Knight Class ---");
+        Knight knight1 = new Knight("Arthur", 5, 100, 20);
+        Knight knight2 = new Knight("Lancelot", 6, 120, 25);
+        knight1.blockAttack();
+        knight2.boostDefense();
+        System.out.println(knight2.getName() + "'s new defense points: " + knight2.getDefensePoints());
+
         System.out.println("--- Testing Archer ---");
         Archer archer = new Archer("Legolas", 10, 80, 50);
         archer.shootEnemy();
