@@ -3,13 +3,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Test",
-            "request": "launch",
-            "mainClass": "practiceModules.practice_LabMod11.Test",
-            "projectName": "JavaProjects_4ab2e616"
-        },
-        {
-            "type": "java",
             "name": "Run Current File",
             "request": "launch",
             "mainClass": "${file}",
