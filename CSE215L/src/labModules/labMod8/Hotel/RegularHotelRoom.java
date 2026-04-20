@@ -39,8 +39,6 @@ public class RegularHotelRoom extends HotelRoom {
         } else if (hasAC) {
             currentPricePerNight += 700;
         }
-        // If neither, uses regular charge
-
         return currentPricePerNight * days;
     }
 }
