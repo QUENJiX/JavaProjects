@@ -7,20 +7,22 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        FictionBook fb = new FictionBook("Harry Potter", "J.K. Rowling", "Fantasy");
-        NonFictionBook nfb = new NonFictionBook("Sapiens", "Yuval Noah Harari", "History");
+        FictionBook fb = new FictionBook("Harry Potter", "J.k Rowling", "Fantasy");
+        NonFictionBook nFb = new NonFictionBook("A Brief History of Time", "Stepher Hawking", "Physics");
 
-        fb.displayInfo();
-        System.out.print("Enter age to check FictionBook recommendation: ");
-        int fbAge = input.nextInt();
-        System.out.println("Is Recommended: " + fb.isRecommendedForAge(fbAge));
-
-        System.out.println();
-
-        nfb.displayInfo();
-        System.out.print("Enter age to check NonFictionBook recommendation: ");
-        int nfbAge = input.nextInt();
-        System.out.println("Is Recommended: " + nfb.isRecommendedForAge(nfbAge));
+        System.out.print("\nEnter your age to view recommendation: ");
+        int age = input.nextInt();
+        if(nFb.isRecommendedForAge(age)){
+            System.out.println();
+            nFb.displayInfo();
+            System.out.println();
+        }else if (fb.isRecommendedForAge(age)){
+            System.out.println();
+            fb.displayInfo();
+            System.out.println();
+        }else{
+            System.out.println("Get the fuck out of my Library!");
+        }
 
         input.close();
     }

@@ -4,9 +4,7 @@ public class FirePokemon implements Pokemon {
     private String name;
     private int level;
 
-    public FirePokemon() {
-    }
-
+    public FirePokemon() {}
     public FirePokemon(String name, int level) {
         this.name = name;
         this.level = level;
@@ -16,22 +14,18 @@ public class FirePokemon implements Pokemon {
     public void setName(String name) {
         this.name = name;
     }
-
     @Override
     public String getName() {
         return name;
     }
-
     @Override
     public int getLevel() {
         return level;
     }
-
     @Override
     public void levelUp() {
         level++;
     }
-
     @Override
     public void attack() {
         System.out.println(name + " has used Ember");

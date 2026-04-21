@@ -2,25 +2,32 @@ package labModules.labMod13;
 
 public class Main {
     public static void main(String[] args) {
-        FirePokemon f1 = new FirePokemon("Charmander", 5);
-        FirePokemon f2 = new FirePokemon("Vulpix", 8);
+        FirePokemon charmander = new FirePokemon("Charmander", 5);
+        WaterPokemon squirtle = new WaterPokemon("Squirtle", 5);
+        GrassPokemon bulbasaur = new GrassPokemon("Bulbasaur", 5);
+        ElectricPokemon pikachu = new ElectricPokemon("Pikachu", 5);
+        FlyingPokemon pidgey = new FlyingPokemon("Pidgey", 3);
+        FightingPokemon machop = new FightingPokemon("Machop", 6);
 
-        WaterPokemon w1 = new WaterPokemon("Squirtle", 5);
-        WaterPokemon w2 = new WaterPokemon("Psyduck", 10);
+        charmander.attack();
+        squirtle.attack();
+        bulbasaur.attack();
+        pikachu.attack();
+        pidgey.attack();
+        machop.attack();
 
-        f1.attack();
-        f2.attack();
-        w1.attack();
-        w2.attack();
+        System.out.println("\n--- Pokemon Data ---");
 
+        charmander.displayInfo();
         System.out.println();
-
-        f1.displayInfo();
+        squirtle.displayInfo();
         System.out.println();
-        f2.displayInfo();
+        bulbasaur.displayInfo();
         System.out.println();
-        w1.displayInfo();
+        pikachu.displayInfo();
         System.out.println();
-        w2.displayInfo();
+        pidgey.displayInfo();
+        System.out.println();
+        machop.displayInfo();
     }
 }

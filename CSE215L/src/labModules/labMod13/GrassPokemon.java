@@ -1,40 +1,40 @@
 package labModules.labMod13;
 
-public class WaterPokemon implements Pokemon {
+public class GrassPokemon implements Pokemon {
     private String name;
     private int level;
 
-    public WaterPokemon() {}
-    public WaterPokemon(String name, int level) {
+    public GrassPokemon() {
+    }
+
+    public GrassPokemon(String name, int level) {
         this.name = name;
         this.level = level;
     }
 
-    @Override
     public void setName(String name) {
         this.name = name;
     }
-    @Override
+
     public String getName() {
         return name;
     }
-    @Override
+
     public int getLevel() {
         return level;
     }
-    @Override
+
     public void levelUp() {
         level++;
     }
-    @Override
+
     public void attack() {
-        System.out.println(name + " has used Water Gun");
+        System.out.println(name + " has used Razor Leaf");
     }
-    
-    @Override
+
     public void displayInfo() {
-        System.out.println(name);
-        System.out.println("Water");
-        System.out.println(level);
+        System.out.println("Name: " + name);
+        System.out.println("Type: Grass");
+        System.out.println("Level: " + level);
     }
 }
