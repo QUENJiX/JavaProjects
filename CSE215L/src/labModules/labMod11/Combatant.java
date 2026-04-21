@@ -5,8 +5,6 @@ public class Combatant {
     private int health;
 
     public Combatant() {
-        this.name = "Unknown";
-        this.health = 100;
     }
 
     public Combatant(String name, int health) {
@@ -30,13 +28,13 @@ public class Combatant {
         this.health = 100;
     }
 
-    public void healthDeplete(int damage) {
-        this.health -= damage;
+    public void displayDetails() {
+        System.out.println(name);
+        System.out.println(health);
     }
 
-    public void displayDetails() {
-        System.out.println("Name: " + name);
-        System.out.println("Health: " + health);
+    public void healthDeplete(int damage) {
+        this.health -= damage;
     }
 
     public void performSpecialMove(Combatant k) {

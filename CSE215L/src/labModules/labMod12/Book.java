@@ -1,12 +1,10 @@
 package labModules.labMod12;
 
-abstract class Book {
+public abstract class Book {
     private String name;
     private String author;
 
     public Book() {
-        this.name = "Unknown";
-        this.author = "Unknown";
     }
 
     public Book(String name, String author) {

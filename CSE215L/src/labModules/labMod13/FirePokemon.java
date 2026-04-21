@@ -1,12 +1,10 @@
 package labModules.labMod13;
 
-class FirePokemon implements Pokemon {
+public class FirePokemon implements Pokemon {
     private String name;
     private int level;
 
     public FirePokemon() {
-        this.name = "Unknown Fire Type";
-        this.level = 1;
     }
 
     public FirePokemon(String name, int level) {
@@ -21,28 +19,28 @@ class FirePokemon implements Pokemon {
 
     @Override
     public String getName() {
-        return this.name;
+        return name;
     }
 
     @Override
     public int getLevel() {
-        return this.level;
+        return level;
     }
 
     @Override
     public void levelUp() {
-        this.level += 1;
+        level++;
     }
 
     @Override
     public void attack() {
-        System.out.println(this.name + " has used Ember");
+        System.out.println(name + " has used Ember");
     }
 
     @Override
     public void displayInfo() {
-        System.out.println("Name: " + this.name);
-        System.out.println("Type: Fire");
-        System.out.println("Level: " + this.level);
+        System.out.println(name);
+        System.out.println("Fire");
+        System.out.println(level);
     }
 }

@@ -1,6 +1,6 @@
 package labModules.labMod13;
 
-interface Pokemon {
+public interface Pokemon {
     void setName(String name);
 
     String getName();

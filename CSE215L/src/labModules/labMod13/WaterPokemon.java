@@ -1,12 +1,10 @@
 package labModules.labMod13;
 
-class WaterPokemon implements Pokemon {
+public class WaterPokemon implements Pokemon {
     private String name;
     private int level;
 
     public WaterPokemon() {
-        this.name = "Unknown Water Type";
-        this.level = 1;
     }
 
     public WaterPokemon(String name, int level) {
@@ -21,28 +19,28 @@ class WaterPokemon implements Pokemon {
 
     @Override
     public String getName() {
-        return this.name;
+        return name;
     }
 
     @Override
     public int getLevel() {
-        return this.level;
+        return level;
     }
 
     @Override
     public void levelUp() {
-        this.level += 1;
+        level++;
     }
 
     @Override
     public void attack() {
-        System.out.println(this.name + " has used Water Gun");
+        System.out.println(name + " has used Water Gun");
     }
 
     @Override
     public void displayInfo() {
-        System.out.println("Name: " + this.name);
-        System.out.println("Type: Water");
-        System.out.println("Level: " + this.level);
+        System.out.println(name);
+        System.out.println("Water");
+        System.out.println(level);
     }
 }

@@ -1,11 +1,9 @@
 package labModules.labMod12;
 
-class FictionBook extends Book {
+public class FictionBook extends Book {
     private String genre;
 
     public FictionBook() {
-        super();
-        this.genre = "Unknown";
     }
 
     public FictionBook(String name, String author, String genre) {
@@ -23,9 +21,9 @@ class FictionBook extends Book {
 
     @Override
     public void displayInfo() {
-        System.out.println("Name: " + getName());
-        System.out.println("Author: " + getAuthor());
-        System.out.println("Genre: " + genre);
+        System.out.println(getName());
+        System.out.println(getAuthor());
+        System.out.println(genre);
     }
 
     @Override

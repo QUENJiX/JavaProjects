@@ -1,11 +1,9 @@
 package labModules.labMod12;
 
-class NonFictionBook extends Book {
+public class NonFictionBook extends Book {
     private String subject;
 
     public NonFictionBook() {
-        super();
-        this.subject = "Unknown";
     }
 
     public NonFictionBook(String name, String author, String subject) {
@@ -23,9 +21,9 @@ class NonFictionBook extends Book {
 
     @Override
     public void displayInfo() {
-        System.out.println("Name: " + getName());
-        System.out.println("Author: " + getAuthor());
-        System.out.println("Subject: " + subject);
+        System.out.println(getName());
+        System.out.println(getAuthor());
+        System.out.println(subject);
     }
 
     @Override
