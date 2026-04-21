@@ -5,38 +5,39 @@ public class Test {
         MartialArtist k1 = new MartialArtist("Sujhon Majhi", 100);
         SuperSoldier k2 = new SuperSoldier("Vikram Rathore", 100);
         SuperAgent tiger = new SuperAgent("Tiger", 100);
-        
+
         System.out.println("\nFighter Information: \n");
         k1.displayDetails();
         System.out.println();
         k2.displayDetails();
 
-        /* // Classwork Test Portion
-        * System.out.println("\nTesting Martial Artist: \n");
-        * k1.displayDetails();
-        * k1.performSpecialMove(k2);
-        * 
-        * System.out.println("\nTesting Super Soldier: \n");
-        * k2.displayDetails();
-        * k2.performSpecialMove(k1);
-        * System.out.println();
-        */
+        /*
+         * // Classwork Test Portion
+         * System.out.println("\nTesting Martial Artist: \n");
+         * k1.displayDetails();
+         * k1.performSpecialMove(k2);
+         * 
+         * System.out.println("\nTesting Super Soldier: \n");
+         * k2.displayDetails();
+         * k2.performSpecialMove(k1);
+         * System.out.println();
+         */
 
         System.out.println("\nBattel Begins: \n");
-        while(k1.getHealth() > 0 && k2.getHealth() > 0){
+        while (k1.getHealth() > 0 && k2.getHealth() > 0) {
             int choice = (int) Math.ceil(Math.random() * 2);
 
-            if(choice == 1){
+            if (choice == 1) {
                 k1.performSpecialMove(k2);
-            }else{
+            } else {
                 k2.performSpecialMove(k1);
             }
         }
 
         Combatant kw;
-        if(k1.getHealth() > 0){
+        if (k1.getHealth() > 0) {
             kw = k1;
-        }else{
+        } else {
             kw = k2;
         }
         System.out.println("\nThe Battel Ended.\n");
@@ -44,7 +45,7 @@ public class Test {
         kw.recover();
         System.out.println("\n" + kw.getName() + "'s health recovered to 100.");
 
-        System.out.println("\n" + kw.getName() + " v/s " + tiger.getName() +"Begins\n");
+        System.out.println("\n" + kw.getName() + " v/s " + tiger.getName() + "Begins\n");
         while (kw.getHealth() > 0 && tiger.getHealth() > 0) {
             int choice = (int) Math.ceil(Math.random() * 2);
 

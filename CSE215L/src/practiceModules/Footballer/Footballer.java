@@ -5,7 +5,7 @@ public class Footballer {
     private String name;
     private String team;
     private String position;
-    private int matches;
+    // private int matches;
     private int goals;
     private int assists;
 
@@ -14,7 +14,7 @@ public class Footballer {
         this.name = null;
         this.team = null;
         this.position = null;
-        this.matches = 0;
+        // this.matches = 0;
         this.goals = 0;
         this.assists = 0;
 
@@ -41,7 +41,7 @@ public class Footballer {
 
     //4a.
     public void increaseMatches() {
-        this.matches++;
+        // this.matches++;
     }
     // 4b.
     public void increaseGoals(int goalsToAdd){

@@ -8,7 +8,7 @@ public class Footballer {
     private String name;
     private String team;
     private String position;
-    private int matches;
+    // private int matches;
     private int goals;
     private int assists;
 
@@ -17,7 +17,7 @@ public class Footballer {
         this.name = "";
         this.team = "";
         this.position = "";
-        this.matches = 0;
+        // this.matches = 0;
         this.goals = 0;
         this.assists = 0;
     }
@@ -49,7 +49,7 @@ public class Footballer {
 
     // Methods to increase stats
     public void increaseMatches() {
-        this.matches += 1; // Increases by 1; no parameters
+        // this.matches += 1; // Increases by 1; no parameters
     }
 
     public void increaseGoals(int addedGoals) {
