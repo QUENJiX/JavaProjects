@@ -3,9 +3,7 @@ package labModules.labMod12;
 public class FictionBook extends Book {
     private String genre;
 
-    public FictionBook() {
-    }
-
+    public FictionBook() {}
     public FictionBook(String name, String author, String genre) {
         super(name, author);
         this.genre = genre;
@@ -13,9 +11,7 @@ public class FictionBook extends Book {
 
     public void setGenre(String genre) {
         this.genre = genre;
-    }
-
-    public String getGenre() {
+    }public String getGenre() {
         return genre;
     }
 
