@@ -2,13 +2,11 @@ package labModules.labMod14;
 
 import java.util.Scanner;
 
-import java.util.Scanner;
-
 public class ArrayRandom {
     public static void main(String[] args) {
         int[] a = new int[100];
         for (int i = 0; i < 100; i++) {
-            a[i] = (int) (Math.random() * 10000);
+            a[i] = (int) (Math.random() * 10000); //
         }
 
         Scanner input = new Scanner(System.in);

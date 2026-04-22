@@ -33,8 +33,8 @@ public class FirePokemon implements Pokemon {
 
     @Override
     public void displayInfo() {
-        System.out.println(name);
-        System.out.println("Fire");
-        System.out.println(level);
+        System.out.println("Name: " + name);
+        System.out.println("Type: Fire");
+        System.out.println("Level: " + level);
     }
 }

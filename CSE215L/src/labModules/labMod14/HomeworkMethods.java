@@ -2,8 +2,6 @@ package labModules.labMod14;
 
 import java.util.Scanner;
 
-import java.util.Scanner;
-
 public class HomeworkMethods {
 
     public static void main(String[] args) {

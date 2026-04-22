@@ -3,8 +3,6 @@ package labModules.labMod14;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import java.util.Scanner;
-
 public class PositiveSum {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

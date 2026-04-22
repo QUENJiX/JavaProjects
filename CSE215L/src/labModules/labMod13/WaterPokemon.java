@@ -33,8 +33,8 @@ public class WaterPokemon implements Pokemon {
     
     @Override
     public void displayInfo() {
-        System.out.println(name);
-        System.out.println("Water");
-        System.out.println(level);
+        System.out.println("Name: " + name);
+        System.out.println("Type: Water");
+        System.out.println("Level: " + level);
     }
 }
