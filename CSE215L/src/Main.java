@@ -1,33 +1,32 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.Vector;
 
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Vector<String> names = new Vector<>();
-        
-        System.out.print("Enter the number of names: ");
-        int n = input.nextInt();
-        for (int i = 0; i < n; i++) {
-            System.out.print("Enter name " + (i + 1) + ": ");
-            String name = input.next();
-            names.add(name);
-        }
 
-        names.size();
-        System.out.println("\nNames in the vector:" + names);
-        System.out.println("\nFirst name: " + names.get(0));
-        System.out.println("Total names: " + names.size());
+        int inputCount = 0;
+        int sum = 0;
 
-        String toDelete = "John";
-        if (names.contains(toDelete)) {
-            names.remove(toDelete);
-            System.out.println("\n" + toDelete + " has been removed from the vector.");
-        } else {
-            System.out.println("\n" + toDelete + " is not found in the vector.");
+        while (inputCount < 10) {
+            try {
+                System.out.print("\nEnter a positive integer: ");
+                int num = input.nextInt();
+                if (num < 0) {
+                    throw new IllegalArgumentException("Enter positve integers only.");
+                }
+                sum += num;
+                inputCount++;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input!");
+                input.next();
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            } catch (Exception e) {
+                System.out.println("Invalid input!");
+            }
         }
-        System.out.println("Names after removal:" + names);
-        System.out.println();
+        System.out.println("\nThe sum is: " + sum);
         input.close();
     }
 }
