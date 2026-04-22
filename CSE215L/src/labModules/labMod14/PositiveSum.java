@@ -11,6 +11,7 @@ public class PositiveSum {
 
         while (count < 10) {
             try {
+                System.out.print("Enter a positive integer: ");
                 int num = input.nextInt();
                 if (num < 0) {
                     throw new IllegalArgumentException("Input positive integer only");
@@ -20,6 +21,7 @@ public class PositiveSum {
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             } catch (Exception e) {
+                System.out.println("Invalid input!");
                 input.next();
             }
         }

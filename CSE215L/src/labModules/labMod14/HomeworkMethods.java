@@ -19,6 +19,7 @@ public class HomeworkMethods {
 
         while (count < 5) {
             try {
+                System.out.print("\nEnter an even integer: ");
                 int num = input.nextInt();
                 if (num % 2 != 0) {
                     throw new IllegalArgumentException("Even integers only");
@@ -33,6 +34,7 @@ public class HomeworkMethods {
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             } catch (Exception e) {
+                System.out.println("Invalid input!");
                 input.next();
             }
         }
@@ -47,6 +49,7 @@ public class HomeworkMethods {
 
         while (count < 10) {
             try {
+                System.out.print("\nEnter a vowel: ");
                 char ch = input.next().charAt(0);
                 char lower = Character.toLowerCase(ch);
                 if (lower != 'a' && lower != 'e' && lower != 'i' && lower != 'o' && lower != 'u') {
@@ -73,7 +76,7 @@ public class HomeworkMethods {
         try {
             System.out.println(arr[24]);
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("This is an array of size 20!");
+            System.out.println("\nThis is an array of size 20!");
         }
     }
 }
