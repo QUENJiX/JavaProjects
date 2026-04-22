@@ -10,6 +10,8 @@ public class Test {
         k1.displayDetails();
         System.out.println();
         k2.displayDetails();
+        System.out.println();
+        tiger.displayDetails();
 
         /*
          * // Classwork Test Portion

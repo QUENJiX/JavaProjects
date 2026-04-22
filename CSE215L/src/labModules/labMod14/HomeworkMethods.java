@@ -61,8 +61,8 @@ public class HomeworkMethods {
                 System.out.println(e.getMessage());
             }
         }
-        for (char c : arr) {
-            System.out.print(c + " ");
+        for (char i : arr) {
+            System.out.print(i + " ");
         }
         System.out.println();
     }
