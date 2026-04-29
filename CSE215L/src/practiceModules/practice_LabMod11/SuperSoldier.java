@@ -9,6 +9,7 @@ public class SuperSoldier extends Combatant {
     }
 
     @Override
+    // hasib.performSpecialMove(bushra)
     public void performSpecialMove(Combatant k){
         int additionalDamage = (int) Math.round(10 * Math.random());
         int totalDamage = 8 + additionalDamage;
@@ -20,5 +21,4 @@ public class SuperSoldier extends Combatant {
             System.out.println(this.getName() + " wins");
         }
     }
-
 }

@@ -42,6 +42,7 @@ public class Test {
         } else {
             kw = k2;
         }
+        
         System.out.println("\nThe Battel Ended.\n");
         System.out.println("The winner is " + kw.getName() + ". HP left: " + kw.getHealth());
         kw.recover();

@@ -1,5 +1,9 @@
 package labModules.labMod7;
 
+// IS-A
+// Animal & Dog
+// A Dog IS-A Animal
+
 public class Archer extends RPGCharacter {
     private int accuracy;
 
