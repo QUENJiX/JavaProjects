@@ -14,6 +14,7 @@ public class ClassWork2 {
             System.out.println("Enter lines of text (type 'STOP' on a new line to finish):");
             while (true) {
                 String line = input.nextLine();
+                // line.equals("STOP");
                 if (line.equals("STOP")) {
                     break;
                 }
@@ -31,6 +32,10 @@ public class ClassWork2 {
                 String line = fileScanner.nextLine();
                 System.out.println(line);
 
+                // line =      I love my country     
+                // line.trim() = I love my country
+                // line.trim().isEmpty() = empty
+                // !line.trim().isEmpty() = NOT empty
                 if (!line.trim().isEmpty()) {
                     nonEmptyCount++;
                 }
