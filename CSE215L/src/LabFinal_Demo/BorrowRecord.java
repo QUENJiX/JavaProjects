@@ -29,15 +29,13 @@ public class BorrowRecord {
     }
 
     public void saveToFile(String fileName) {
-        try {
-            FileWriter writer = new FileWriter(fileName, true);
+        try (FileWriter writer = new FileWriter(fileName, true)) {
             writer.write("Record ID: " + recordId + "\n");
             writer.write("Student: " + student.getName() + "\n");
             writer.write("Item: " + item.getTitle() + "\n");
             writer.write("Days: " + days + "\n");
             writer.write("Total Fee: " + getTotalFee() + "\n");
             writer.write("--------------------\n");
-            writer.close();
         } catch (IOException e) {
             System.out.println("File writing failed.");
         }

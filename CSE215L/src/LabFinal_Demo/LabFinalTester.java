@@ -58,16 +58,12 @@ public class LabFinalTester {
         System.out.println();
         System.out.println("===== File Content =====");
 
-        try {
-            FileReader reader = new FileReader("borrow_report.txt");
-            Scanner fileScanner = new Scanner(reader);
+        try (Scanner fileScanner = new Scanner(new FileReader("borrow_report.txt"))) {
 
             while (fileScanner.hasNextLine()) {
                 System.out.println(fileScanner.nextLine());
             }
 
-            fileScanner.close();
-            reader.close();
         } catch (IOException e) {
             System.out.println("File reading failed.");
         }
