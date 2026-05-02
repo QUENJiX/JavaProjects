@@ -15,7 +15,7 @@ public class MartialArtist extends Combatant {
         int totalDamage = 10 + additionalDamage;
 
         System.out.println(
-                getName() + " has performed the Majhi Smacker to " + k.getName() + " by " + totalDamage + " points.");
+                this.getName() + " has performed the Majhi Smacker to " + k.getName() + " by " + totalDamage + " points.");
         k.healthDeplete(totalDamage);
 
         if (k.getHealth() <= 0) {
